@@ -109,6 +109,7 @@ main {
 /* Photo box */
 
 .photo-box {
+    position: relative;
     min-height: 430px;
     overflow: hidden;
     display: flex;
