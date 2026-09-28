@@ -1,0 +1,385 @@
+/* Design tokens */
+:root {
+    /* Colors */
+    --pink: #f3c6cf;
+    --light-pink: #fdf3f5;
+    --green: #a8b58a;
+    --light-green: #e8eddc;
+    --brown: #6b4f3a;
+    --dark-brown: #4d382a;
+    --white: #ffffff;
+
+    /* Spacing */
+    --space-small: 8px;
+    --space-medium: 16px;
+    --space-large: 24px;
+    --space-xl: 40px;
+
+    /* Typography */
+    --text-small: 14px;
+    --text-normal: 16px;
+    --text-large: 24px;
+    --text-xl: 36px;
+}
+
+/* Basic styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: var(--text-normal);
+    line-height: 1.6;
+    color: var(--dark-brown);
+    background-color: var(--light-pink);
+}
+
+/* Header */
+
+header {
+    position: relative;
+    padding: 24px 40px;
+    background-color: var(--green);
+}
+
+header h1 {
+    margin: 0;
+    font-family: "Berkshire Swash", cursive;
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--dark-brown);
+}
+
+/* Navigation */
+
+nav {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+
+    display: flex;
+    gap: var(--space-small);
+    padding: var(--space-small);
+
+    background-color: var(--white);
+    border-radius: 16px;
+}
+
+nav a {
+    padding: var(--space-small) var(--space-medium);
+    color: var(--dark-brown);
+    background-color: var(--pink);
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background-color: var(--green);
+    color: var(--dark-brown);
+}
+
+nav a:focus {
+    background-color: var(--green);
+    color: var(--dark-brown);
+    outline: 3px solid var(--brown);
+}
+
+/* Page layout */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: var(--space-xl) auto;
+}
+
+/* Homepage layout */
+
+.home-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+/* Photo box */
+
+.photo-box {
+    min-height: 430px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green);
+    border: 3px solid var(--dark-brown);
+    border-radius: 30px;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 27px;
+}
+
+/* Welcome card */
+
+article {
+    padding: var(--space-xl);
+    background-color: var(--white);
+    border-radius: 20px;
+    text-align: center;
+}
+
+article h2 {
+    margin-top: 0;
+    margin-bottom: var(--space-large);
+    font-size: var(--text-large);
+    color: var(--brown);
+}
+
+article h3 {
+    margin-top: 0;
+    color: var(--brown);
+}
+
+article p {
+    margin-bottom: var(--space-medium);
+}
+
+/* Other sections */
+
+section h2 {
+    margin-bottom: var(--space-medium);
+    font-size: var(--text-large);
+    color: var(--brown);
+}
+/* About page */
+
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-large);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-section .card {
+    min-height: 400px;
+    text-align: left;
+}
+
+.about-section h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.about-section p {
+    text-align: justify;
+}
+/* Card component */
+
+.card {
+    width: 100%;
+    padding: var(--space-large);
+    margin-bottom: var(--space-large);
+    background-color: var(--white);
+    border: 2px solid var(--light-green);
+    border-radius: 12px;
+}
+
+/* Table */
+
+table {
+    margin: 0 auto;
+}
+
+/* Button component */
+
+.button {
+    display: block;
+    width: fit-content;
+    margin: var(--space-large) auto 0;
+    padding: 12px 20px;
+    color: var(--white);
+    background-color: var(--brown);
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.button:hover {
+    background-color: var(--green);
+    color: var(--dark-brown);
+}
+
+.button:focus {
+    background-color: var(--pink);
+    color: var(--dark-brown);
+    outline: 3px solid var(--green);
+}
+/* Skills page */
+
+.skills-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills-section h2 {
+    margin-bottom: var(--space-large);
+    font-size: var(--text-large);
+    font-weight: 700;
+    color: var(--brown);
+}
+
+.skills-card {
+    padding: var(--space-large);
+    overflow-x: auto;
+}
+
+.skills-card table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px 0;
+}
+
+.skills-card th,
+.skills-card td {
+    padding: var(--space-medium);
+}
+
+.skills-card th {
+    color: var(--brown);
+    background-color: var(--light-green);
+}
+
+.skills-card td {
+    text-align: center;
+    border-bottom: 1px solid var(--light-green);
+}
+/* Contact page */
+
+.contact-section {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: var(--space-large);
+    font-size: var(--text-large);
+    font-weight: 700;
+    color: var(--brown);
+}
+
+.contact-card {
+    padding: var(--space-xl);
+    background-color: var(--brown);
+    border-radius: 20px;
+    text-align: left;
+}
+
+.contact-card p {
+    margin-bottom: var(--space-medium);
+}
+
+.contact-card label {
+    display: block;
+    margin-bottom: var(--space-small);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.contact-card input,
+.contact-card textarea {
+    width: 100%;
+    padding: 12px;
+    font-family: "Poppins", sans-serif;
+    font-size: var(--text-normal);
+    color: var(--dark-brown);
+    background-color: var(--white);
+    border: none;
+    border-radius: 8px;
+}
+
+.contact-card textarea {
+    resize: vertical;
+}
+
+.contact-card button {
+    display: block;
+    margin: var(--space-large) auto 0;
+    padding: 12px 24px;
+    font-family: "Poppins", sans-serif;
+    font-size: var(--text-normal);
+    font-weight: 600;
+    color: var(--brown);
+    background-color: var(--white);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.contact-card button:hover {
+    background-color: var(--pink);
+}
+
+.contact-card button:focus {
+    background-color: var(--green);
+    color: var(--dark-brown);
+    outline: 3px solid var(--white);
+}
+/* Footer */
+
+footer {
+    padding: var(--space-large);
+    text-align: center;
+    background-color: var(--green);
+    color: var(--dark-brown);
+}
+
+footer p {
+    margin: 0;
+    font-size: var(--text-small);
+}
+
+/* Responsive design */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        position: static;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: var(--space-medium);
+    }
+
+    .home-section {
+        grid-template-columns: 1fr;
+        gap: var(--space-large);
+    }
+
+    .photo-box {
+        min-height: 280px;
+    }
+
+    main {
+        width: 92%;
+        margin: var(--space-large) auto;
+    }
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+}
