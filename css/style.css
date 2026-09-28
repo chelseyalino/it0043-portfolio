@@ -206,6 +206,7 @@ table {
     width: fit-content;
     margin: var(--space-large) auto 0;
     padding: 12px 20px;
+    font-weight: 600;
     color: var(--white);
     background-color: var(--brown);
     text-decoration: none;
