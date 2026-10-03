@@ -40,7 +40,9 @@ body {
 /* Header */
 
 header {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 24px 40px;
     background-color: var(--green);
 }
@@ -56,9 +58,6 @@ header h1 {
 /* Navigation */
 
 nav {
-    position: absolute;
-    top: 30px;
-    right: 40px;
 
     display: flex;
     gap: var(--space-small);
@@ -350,7 +349,18 @@ footer p {
 }
 
 /* Responsive design */
+@media (max-width: 900px) {
 
+    header {
+        flex-direction: column;
+        gap: var(--space-medium);
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
 @media (max-width: 700px) {
 
     header {
