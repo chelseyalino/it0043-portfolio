@@ -99,7 +99,7 @@ main {
 
 .home-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
     gap: var(--space-xl);
     margin-bottom: var(--space-xl);
